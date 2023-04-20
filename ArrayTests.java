@@ -1,4 +1,7 @@
 import static org.junit.Assert.*;
+
+import java.lang.reflect.Array;
+
 import org.junit.*;
 
 public class ArrayTests {
@@ -9,6 +12,18 @@ public class ArrayTests {
     assertArrayEquals(new int[]{ 3 }, input1);
 	}
 
+  @Test
+  public void testreverseInPlace2() {
+    int[] input2 = {1, 2, 3, 4, 5};
+    ArrayExamples.reverseInPlace(input2);
+    assertArrayEquals(new int[]{5, 4, 3, 2, 1}, input2);
+  }
+
+  @Test
+  public void testReversed2() {
+    int[] input2 = {1, 2, 3, 4, 5};
+    assertArrayEquals(new int[]{5, 4, 3, 2, 1}, ArrayExamples.reversed(input2));
+  }
 
   @Test
   public void testReversed() {
